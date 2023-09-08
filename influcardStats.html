@@ -6,399 +6,9 @@
         <title>Influcard</title>
         <link rel="stylesheet" href="./src/css/normalize.css">
         <link rel="stylesheet" href="./src/css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <style>
-        :root {
-            --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            --font-size-titulo: 2.25rem;
-            --font-size-buttons: 1.5rem;
-            --font-size-submenu: 1.25rem;
-            --font-size-normal: 1rem;
-            --aumento-ui: 60%
-        }   
 
-
-        header {
-            display: flex;
-            min-height: 10rem;
-            width: -webkit-fill-available;
-            padding: 0.5rem;
-            justify-content: space-between;
-            align-items: center;
-            flex-shrink: 0;
-            color: #2a2a2a;
-        }
-
-        /*Header influcard stats*/
-
-        .header__influcard {
-            display: flex;
-            
-        }
-
-        .influcard__perfil--datos-negro span, .influcard__perfil--datos-negro ul {
-            color: #2a2a2a
-        }
-
-        .header__stats {
-            display: flex;
-            height: 10rem;
-            padding: 0.5rem;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .header__stat {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            height: 10rem;
-            width: 10rem;
-            background: #0F0;
-        }
-
-        .header__botones {
-            display: flex;
-            width: 14rem;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: .5rem;
-        }
-
-        .header__boton--salir{
-            color: #fff;
-            background: #2a2a2a;
-        }
-
-        .header__boton {
-            display: flex;
-            height: 2rem;
-            width: -webkit-fill-available;
-            padding: 1rem;
-            justify-content: center;
-            align-items: center;
-            gap: 0.625rem;
-            border-radius: 1.875rem;
-            font-family: var(--font-family);
-            font-size: var(--font-size-buttons);
-        }
-
-        .header__boton svg {
-            width: 2rem;
-            height: 2rem;
-        }
-
-        .header__boton--descargar{
-            color: #fff;
-            background: #F23A09;
-        }
-
-        /*General*/
-        .flex--column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /*Parte dos de la prueba*/
-        
-        .parte-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
-            gap: 2rem;
-            width: -webkit-fill-available;
-        }
-
-        .parte-2__titulo{
-            display: flex;
-            background-color: #2a2a2a;
-            border-radius: 1.875rem;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            height: 4.375rem;
-            padding: 0.1875rem 0.125rem;
-            gap: 1.25rem;
-        }
-
-        .parte-2__titulo svg {
-            width: 3rem;
-            height: 3rem;
-        }
-
-        .parte-2__titulo span{
-            color: #fff;
-            font-family: var(--font-family);
-            font-size: var(--font-size-titulo);
-        }
-
-        /*Audiencia parte 2*/
-
-        .audiencia__fakeReal {
-            display: flex;
-            min-height: 10rem;
-            padding: .5rem;
-            gap: 0.625rem;
-            border-radius: 1.875rem;
-            font-family: var(--font-family);
-            background: #2A2A2A;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .audiencia__fakeReal--stats {
-            display: flex;
-            min-height: 10rem;
-            padding: .5rem;
-            gap: 0.625rem;
-            border-radius: 1.875rem;
-            font-family: var(--font-family);
-            background: #2a2a2a;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .audiencia {
-            display: flex;
-            flex-direction: column;
-            gap: .5rem;
-        }
-
-        .audiencia__fakeReal--stat svg {
-            width: 3rem;
-            height: 3rem;
-        }
-
-        .audiencia__fakeReal--stat{
-            margin: .5rem;
-            min-width: 10rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 1.5rem;
-        }
-
-        .audiencia__fakeReal--stat span{
-            font-weight: 500;
-        }
-
-        .audiencia__fakeReal--separador{
-            background-color: #fff;
-            width: .1rem;
-            height: 3rem;
-        }
-
-        .audiencia__generoYPais{
-            display: flex;
-            height: 20rem;
-            gap: 1rem;
-            border-radius: 1.875rem;
-            font-family: var(--font-family);
-            font-size: var(--font-size-buttons);
-            background: #2A2A2A;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .audiencia__generoYPais span {
-            font-weight: 500;
-            font-size: 1.5rem;
-        }
-
-        .audiencia__generoYPais div {
-            background-color: #3a3a3a;
-        }
-
-        /* publicaciones */
-
-        .publicaciones {
-            display: flex;
-            flex-direction: column;
-            gap: .5rem;
-        }
-
-        .publicaciones__marcasTrabajado {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            min-height: 20rem;
-            gap: 0.625rem;
-            border-radius: 1.875rem;
-            font-family: var(--font-family);
-            font-size: var(--font-size-buttons);
-            background: #2A2A2A;
-        }
-
-        .publicaciones__marcasTrabajado span {
-            font-weight: 500;
-            font-size: 1.5rem;
-            color: #fff;
-        }
-
-        .publicaciones__marcasTrabajado--marcas {
-            font-weight: 500;
-            font-size: 1.5rem;
-            color: #000;
-        }
-
-        .publicaciones__marcasTrabajado--marcas-marca{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #fff;
-            padding: .5rem;
-            border-radius: 1.86rem;
-        }
-
-        .publicaciones__marcasTrabajado--marcas-marca img{
-            height: 5rem;
-        }
-        
-
-
-        /* Desempeño parte 2*/
-
-        .desempenyo {
-            display: flex;
-            flex-direction: column;
-            gap: .5rem;
-        }
-
-        .desempenyo__audienciaAlcance {
-            display: flex;
-            flex-direction: column;
-            height: 10rem;
-            gap: 0.625rem;
-            border-radius: 1.875rem;
-            font-family: var(--font-family);
-            font-size: var(--font-size-buttons);
-            background: #2A2A2A;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .desempenyo__audienciaAlcance--stat svg {
-            width: 2rem;
-            height: 2rem;
-            margin-right: 1rem;
-        }
-
-        .desempenyo__audienciaAlcance--stat{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #fff;
-            width: -webkit-fill-available;
-            padding: 0 5rem;
-            font-family: var(--font-family);
-            font-weight: 700;
-        }
-
-        /* grafica v1 */
-
-        .desempenyo__graficaV1 {
-            display: flex;
-            flex-direction: column;
-            height: 10rem;
-            gap: 0.625rem;
-            padding: 1rem;
-            border-radius: 1.875rem;
-            font-family: var(--font-family);
-            font-size: var(--font-size-buttons);
-            background: #2A2A2A;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .desempenyo__graficaV1--titulo{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #fff;
-            width: -webkit-fill-available;
-            padding: 0 3rem;
-            font-family: var(--font-family);
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .desempenyo__graficaV1--titulo span {
-            font-size: 1.6rem;
-        }
-
-        .desempenyo__graficaV1--titulo svg {
-            padding-top: .4rem;
-            width: 2rem;
-            height: 2rem;
-            margin-right: 1rem;
-        }
-
-        .desempenyo__graficaV1--AlcanceAudiencia {
-            display: flex;
-            flex-wrap: wrap;
-            width: -webkit-fill-available;
-            align-items: center;
-            justify-content: space-evenly;
-            padding: 0 1rem;
-            color: #fff;
-            gap: 3rem;
-            background-color: #3a3a3a;
-            border-radius: 1.5rem;
-            padding: 1rem;
-        }
-
-        .desempenyo__graficaV1--porcentaje {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .desempenyo__graficaV1--porcentaje span {
-            font-weight: 700;
-        }
-
-        .desempenyo__graficaV1--separador {
-            background-color: #fff;
-            width: .1rem;
-            height: 3rem;
-        }
-
-        /*grafica v2*/
-
-        .graficaV2__contenedor {
-            display: flex;
-            flex-direction: column;
-            min-height: 10rem;
-            padding: .5rem;
-            gap: 0.625rem;
-            border-radius: 1.875rem;
-            font-family: var(--font-family);
-            background: #2A2A2A;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            color: #fff;
-        }
-
-        .graficaV2__contenedor span {
-            font-weight: 500;
-            font-size: 1.5rem;
-        }
-
-        .graficaV2__grafica {
-            border-radius: 1.87rem;
-        }
 
 
     </style>
@@ -422,28 +32,45 @@
                 </div>
             </div>
             <div class="header__stats">
-                <div class="header__stat" id="header__reachGraph"></div>
-                <div class="header__stat" id="header__relevanceGraph"></div>
-                <div class="header__stat" id="header__resonanceGraph"></div>
+                <div class="header__stat--container">
+                    <span>Reach</span>
+                    <div class="header__stat">
+                        <canvas id="header__reachGraph"></canvas>
+                    </div>
+                </div>
+                <div class="header__stat--container">
+                    <span>Relevance</span>
+                    <div class="header__stat">
+                        <canvas id="header__relevanceGraph"></canvas>
+                    </div>
+                </div>
+                <div class="header__stat--container">
+                    <span>Resonance</span>
+                    <div class="header__stat">
+                        <canvas id="header__resonanceGraph"></canvas>
+                    </div>
+                </div>
             </div>
             <div class="header__botones">
-                <div class="header__boton header__boton--salir">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="43"
-                        height="42" viewBox="0 0 43 42" fill="none">
-                        <g clip-path="url(#clip0_8_74)">
-                            <path
-                                d="M5.99523 19.145C5.50365 19.6372 5.22754 20.3044 5.22754 21C5.22754 21.6956 5.50365 22.3628 5.99523 22.855L15.8932 32.7565C16.1371 33.0003 16.4265 33.1937 16.7451 33.3257C17.0637 33.4577 17.4051 33.5256 17.75 33.5256C18.0948 33.5256 18.4363 33.4577 18.7548 33.3257C19.0734 33.1937 19.3629 33.0003 19.6067 32.7565C19.8506 32.5127 20.044 32.2232 20.1759 31.9046C20.3079 31.586 20.3758 31.2446 20.3758 30.8997C20.3758 30.5549 20.3079 30.2135 20.1759 29.8949C20.044 29.5763 19.8506 29.2868 19.6067 29.043L14.1887 23.625H34.375C35.0712 23.625 35.7388 23.3484 36.2311 22.8561C36.7234 22.3639 37 21.6962 37 21C37 20.3038 36.7234 19.6361 36.2311 19.1438C35.7388 18.6516 35.0712 18.375 34.375 18.375H14.1887L19.6067 12.957C20.0989 12.4645 20.3754 11.7967 20.3752 11.1005C20.375 10.4042 20.0983 9.73657 19.6059 9.24436C19.1134 8.75215 18.4456 8.47573 17.7494 8.47589C17.0531 8.47606 16.3854 8.7528 15.8932 9.24524L5.99523 19.145Z"
-                                fill="white" />
-                        </g>
-                        <defs>
-                            <clippath id="clip0_8_74">
-                                <rect width="42" height="42" fill="white"
-                                    transform="translate(0.25)" />
-                            </clippath>
-                        </defs>
-                    </svg>
-                    Salir
-                </div>
+                <a href="/index.html">
+                    <div class="header__boton header__boton--salir">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43"
+                            height="42" viewBox="0 0 43 42" fill="none">
+                            <g clip-path="url(#clip0_8_74)">
+                                <path
+                                    d="M5.99523 19.145C5.50365 19.6372 5.22754 20.3044 5.22754 21C5.22754 21.6956 5.50365 22.3628 5.99523 22.855L15.8932 32.7565C16.1371 33.0003 16.4265 33.1937 16.7451 33.3257C17.0637 33.4577 17.4051 33.5256 17.75 33.5256C18.0948 33.5256 18.4363 33.4577 18.7548 33.3257C19.0734 33.1937 19.3629 33.0003 19.6067 32.7565C19.8506 32.5127 20.044 32.2232 20.1759 31.9046C20.3079 31.586 20.3758 31.2446 20.3758 30.8997C20.3758 30.5549 20.3079 30.2135 20.1759 29.8949C20.044 29.5763 19.8506 29.2868 19.6067 29.043L14.1887 23.625H34.375C35.0712 23.625 35.7388 23.3484 36.2311 22.8561C36.7234 22.3639 37 21.6962 37 21C37 20.3038 36.7234 19.6361 36.2311 19.1438C35.7388 18.6516 35.0712 18.375 34.375 18.375H14.1887L19.6067 12.957C20.0989 12.4645 20.3754 11.7967 20.3752 11.1005C20.375 10.4042 20.0983 9.73657 19.6059 9.24436C19.1134 8.75215 18.4456 8.47573 17.7494 8.47589C17.0531 8.47606 16.3854 8.7528 15.8932 9.24524L5.99523 19.145Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clippath id="clip0_8_74">
+                                    <rect width="42" height="42" fill="white"
+                                        transform="translate(0.25)" />
+                                </clippath>
+                            </defs>
+                        </svg>
+                        Salir
+                    </div>
+                </a>
                 <div class="header__boton header__boton--descargar">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25"
                         height="24" viewBox="0 0 25 24" fill="none">
@@ -495,24 +122,23 @@
                 </div>
                 <div class="graficaV2__contenedor">
                     <span>Distribucion por edad</span>
-                    <div class="graficaV2__grafica" id="grafica__distribucionEdad">
-
+                    <div class="graficaV2__grafica">
+                        <canvas id="grafica__distribucionEdad"></canvas>
                     </div>
                 </div>
                 <div class="audiencia__generoYPais">
-
-                        <div class="graficaV2__contenedor">
-                            <span>Distribucion por genero</span>
-                            <div class="graficaV2__grafica" id="grafica__distribucionGenero">
-        
-                            </div>
+                    <div class="audiencia__generoYPais--genero-contenedor">
+                        <span>Distribucion por genero</span>
+                        <div class="audiencia__generoYPais--genero-grafica">
+                            <canvas id="grafica__distribucionGenero"></canvas>
                         </div>
-                        <div class="graficaV2__contenedor">
-                            <span>Distribucion por pais</span>
-                            <div class="graficaV2__grafica" id="grafica__distribucionPais">
-        
-                            </div>
+                    </div>
+                    <div class="audiencia__generoYPais--pais-contenedor">
+                        <span>Distribucion por pais</span>
+                        <div class="audiencia__generoYPais--pais-grafica">
+                            <canvas id="grafica__distribucionPais"></canvas>
                         </div>
+                    </div>
                 </div>
                 
             </div>
@@ -524,14 +150,17 @@
                 </div>
                 <div class="graficaV2__contenedor">
                     <span>Distribucion de su publicacion por territorios</span>
-                    <div class="graficaV2__grafica" id="grafica__distribucionTerritorios">
+                    <div class="grafica__distribucionTerritorios" >
+                        <canvas id="grafica__distribucionTerritorios"></canvas>
 
                     </div>
                 </div>
                 <div class="graficaV2__contenedor">
                     <span>Franja horaria de sus publicaciones</span>
-                    <div class="graficaV2__grafica" id="grafica__distribucionFranjaPublicaciones">
-
+                    <div class="graficaV2__grafica">
+                        <div class="grafica__distribucionFranjaPublicaciones">
+                            <canvas id="grafica__distribucionFranjaPublicaciones"></canvas>
+                        </div>
                     </div>
                 </div>
                 <div class="publicaciones__marcasTrabajado">
@@ -635,11 +264,171 @@
                 </div>
                 <div class="graficaV2__contenedor">
                     <span>Ratio de reproducciones segun dia de publicacion</span>
-                    <div class="graficaV2__grafica" id="grafica__ratioSegunDia">
-
+                    <div class="grafica__ratioSegunDia">
+                        <canvas id="grafica__ratioSegunDia"></canvas>
                     </div>
                 </div>
             </div>
         </main>
     </body>
+    <script>
+    
+
+    function makeChart(typeChart,idGrafica, arrayTitulos, arrayDatos, ejeBooleano = true) {
+    const eje = ejeBooleano ? 'x' : 'y';
+
+    const existingChart = Chart.getChart(idGrafica);
+    if (existingChart) {
+        existingChart.destroy();
+    }
+
+    if (!ejeBooleano) {
+        var scales = {
+                y: {
+                    ticks: {
+                        fontSize: 12, 
+                        maxRotation: 0, 
+                        autoSkip: false,
+                    }
+                },
+                x: {
+                    beginAtZero: true,
+                    ticks:{
+                        callback: function (value) {
+                            return value + '%'; // Agregar el símbolo de porcentaje a las etiquetas
+                        }
+                    }
+                }
+            }
+    } else {
+        var scales = {
+                y: {
+                    ticks: {
+                        fontSize: 12, 
+                        maxRotation: 0, 
+                        autoSkip: false,
+                        callback: function (value) {
+                            return value + '%'; // Agregar el símbolo de porcentaje a las etiquetas
+                        }
+                    }
+                },
+                x: {
+                    beginAtZero: true,
+                }
+            }
+    }
+
+    new Chart(idGrafica, {
+        type: typeChart,
+        data: {
+            labels: arrayTitulos, 
+            datasets: [{
+                label: '',
+                data: arrayDatos,
+                borderWidth: 1,
+                backgroundColor: [
+    'rgba(255, 205, 86)',
+    'rgba(255, 159, 64)',
+    'rgba(153, 102, 255)',
+      'rgba(255, 99, 132)',
+      'rgba(75, 192, 192)',
+      'rgba(54, 162, 235)',
+      'rgba(201, 203, 207)'
+    ],
+    borderColor: [
+        'rgb(255, 205, 86)',
+        'rgb(255, 159, 64)',
+        'rgb(153, 102, 255)',
+      'rgb(255, 99, 132)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(201, 203, 207)'
+    ],label:'%'
+            }]
+        },
+        
+        options: {
+            plugins: {
+                colors: {
+                enabled: true
+                },  
+                legend: {
+                    display: false,
+                    labels: {
+                        boxWidth: 0,
+                    }
+                }
+            },
+            indexAxis: eje,
+            scales:scales
+        }
+    });
+}
+
+    const ratioSegunDia = document.getElementById('grafica__ratioSegunDia');
+    const distribucionTerritorios = document.getElementById('grafica__distribucionTerritorios');
+
+    makeChart('line',ratioSegunDia, ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'], [15, 23, 65, 123, 23, 51, 54]);
+    makeChart('bar',distribucionTerritorios, ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'], [15, 23, 65, 123, 23, 51, 54],false);
+
+    const distribucionEdad = document.getElementById('grafica__distribucionEdad');
+    makeChart('bar',distribucionEdad, ['13-17','18-24','25-34','35-44','45-64','65 +'], [6.73,37.21,53,2.5,0.55,0])
+
+    function makeCircularChart(typeChart, idGrafica, arrayTitulos, arrayDatos, backgroundColor , mostrarLeyenda = true) {
+    var data = {
+        datasets: [{
+            label: 'Reached',
+            data: arrayDatos,
+            borderColor: '#00000000',
+            backgroundColor,
+            label: '%',
+        }],
+        labels: arrayTitulos,
+    };
+    new Chart(idGrafica, {
+        data: data,
+        type: typeChart,
+        options: {
+            plugins : {
+                legend: {
+                    display: mostrarLeyenda,
+                }
+            },
+            scale: {
+                display: false
+            }
+        }
+    });
+}
+
+    const distribucionFranjaPublicaciones = document.getElementById('grafica__distribucionFranjaPublicaciones')
+    makeCircularChart('polarArea',distribucionFranjaPublicaciones,['Mañana', 'Tarde', 'Noche'],[30,50,20],[
+                "rgba(255, 225, 106)",
+                "rgba(255, 159, 64)",
+                "#B7610B",
+                "#1da1f2",
+                "#bd081c"
+            ])
+
+    const distribucionGenero = document.getElementById('grafica__distribucionGenero')
+    makeCircularChart('pie',distribucionGenero,['Hombres','Mujeres'],[26.274,73],[
+        "#1da1f2",
+        "#FF3399",
+            ],true) 
+    
+    const distribucionPais = document.getElementById('grafica__distribucionPais')
+    makeChart('bar',distribucionPais,['ES','US','IT','FR','GB','Otros'], [6.73,37.21,53,2.5,0.55,0],false)
+
+    const reachGraph = document.getElementById('header__reachGraph')
+    makeCircularChart('doughnut',reachGraph,['Reached','No reached'],[50,50],['#0000AAAA','#00000000'],false)
+
+    const relevanceGraph = document.getElementById('header__relevanceGraph')
+    makeCircularChart('doughnut',relevanceGraph,['Relevance','No Relevance'],[52,48],['#E2D006','#00000000'],false)
+
+    const resonanceGraph = document.getElementById('header__resonanceGraph')
+    makeCircularChart('doughnut',resonanceGraph,['Resonance','No resonance'],[60,40],['#06E25A','#00000000'],false)
+
+
+    </script>
+    <script src="./src/js/graficas/header.js"></script>
 </html>
