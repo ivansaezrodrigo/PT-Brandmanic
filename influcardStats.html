@@ -28,7 +28,7 @@
             color: #2a2a2a;
         }
 
-
+        /*Header influcard stats*/
 
         .header__influcard {
             display: flex;
@@ -49,6 +49,10 @@
         }
 
         .header__stat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             height: 10rem;
             width: 10rem;
             background: #0F0;
@@ -91,16 +95,20 @@
             background: #F23A09;
         }
 
+        /*General*/
         .flex--column {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
+        /*Parte dos de la prueba*/
         
         .parte-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+            gap: 2rem;
             width: -webkit-fill-available;
         }
 
@@ -116,14 +124,159 @@
             gap: 1.25rem;
         }
 
+        .parte-2__titulo svg {
+            width: 3rem;
+            height: 3rem;
+        }
+
         .parte-2__titulo span{
             color: #fff;
             font-family: var(--font-family);
             font-size: var(--font-size-titulo);
         }
 
+        /*Audiencia parte 2*/
+
         .audiencia__fakeReal {
             display: flex;
+            min-height: 10rem;
+            padding: .5rem;
+            gap: 0.625rem;
+            border-radius: 1.875rem;
+            font-family: var(--font-family);
+            background: #2A2A2A;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .audiencia__fakeReal--stats {
+            display: flex;
+            min-height: 10rem;
+            padding: .5rem;
+            gap: 0.625rem;
+            border-radius: 1.875rem;
+            font-family: var(--font-family);
+            background: #2a2a2a;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .audiencia {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .audiencia__fakeReal--stat svg {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .audiencia__fakeReal--stat{
+            margin: .5rem;
+            min-width: 10rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .audiencia__fakeReal--stat span{
+            font-weight: 500;
+        }
+
+        .audiencia__fakeReal--separador{
+            background-color: #fff;
+            width: .1rem;
+            height: 3rem;
+        }
+
+        .audiencia__generoYPais{
+            display: flex;
+            height: 20rem;
+            gap: 1rem;
+            border-radius: 1.875rem;
+            font-family: var(--font-family);
+            font-size: var(--font-size-buttons);
+            background: #2A2A2A;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .audiencia__generoYPais span {
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+
+        .audiencia__generoYPais div {
+            background-color: #3a3a3a;
+        }
+
+        /* publicaciones */
+
+        .publicaciones {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .publicaciones__marcasTrabajado {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            min-height: 20rem;
+            gap: 0.625rem;
+            border-radius: 1.875rem;
+            font-family: var(--font-family);
+            font-size: var(--font-size-buttons);
+            background: #2A2A2A;
+        }
+
+        .publicaciones__marcasTrabajado span {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .publicaciones__marcasTrabajado--marcas {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        .publicaciones__marcasTrabajado--marcas-marca{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            padding: .5rem;
+            border-radius: 1.86rem;
+        }
+
+        .publicaciones__marcasTrabajado--marcas-marca img{
+            height: 5rem;
+        }
+        
+
+
+        /* Desempeño parte 2*/
+
+        .desempenyo {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .desempenyo__audienciaAlcance {
+            display: flex;
+            flex-direction: column;
             height: 10rem;
             gap: 0.625rem;
             border-radius: 1.875rem;
@@ -134,11 +287,119 @@
             align-items: center;
         }
 
-        .audiencia {
+        .desempenyo__audienciaAlcance--stat svg {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+        }
+
+        .desempenyo__audienciaAlcance--stat{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            width: -webkit-fill-available;
+            padding: 0 5rem;
+            font-family: var(--font-family);
+            font-weight: 700;
+        }
+
+        /* grafica v1 */
+
+        .desempenyo__graficaV1 {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            height: 10rem;
+            gap: 0.625rem;
+            padding: 1rem;
+            border-radius: 1.875rem;
+            font-family: var(--font-family);
+            font-size: var(--font-size-buttons);
+            background: #2A2A2A;
+            justify-content: center;
+            align-items: center;
         }
+
+
+        .desempenyo__graficaV1--titulo{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            width: -webkit-fill-available;
+            padding: 0 3rem;
+            font-family: var(--font-family);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .desempenyo__graficaV1--titulo span {
+            font-size: 1.6rem;
+        }
+
+        .desempenyo__graficaV1--titulo svg {
+            padding-top: .4rem;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+        }
+
+        .desempenyo__graficaV1--AlcanceAudiencia {
+            display: flex;
+            flex-wrap: wrap;
+            width: -webkit-fill-available;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 0 1rem;
+            color: #fff;
+            gap: 3rem;
+            background-color: #3a3a3a;
+            border-radius: 1.5rem;
+            padding: 1rem;
+        }
+
+        .desempenyo__graficaV1--porcentaje {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .desempenyo__graficaV1--porcentaje span {
+            font-weight: 700;
+        }
+
+        .desempenyo__graficaV1--separador {
+            background-color: #fff;
+            width: .1rem;
+            height: 3rem;
+        }
+
+        /*grafica v2*/
+
+        .graficaV2__contenedor {
+            display: flex;
+            flex-direction: column;
+            min-height: 10rem;
+            padding: .5rem;
+            gap: 0.625rem;
+            border-radius: 1.875rem;
+            font-family: var(--font-family);
+            background: #2A2A2A;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            color: #fff;
+        }
+
+        .graficaV2__contenedor span {
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+
+        .graficaV2__grafica {
+            border-radius: 1.87rem;
+        }
+
 
     </style>
     </head>
@@ -161,9 +422,9 @@
                 </div>
             </div>
             <div class="header__stats">
-                <div class="header__stat">a</div>
-                <div class="header__stat">b</div>
-                <div class="header__stat">c</div>
+                <div class="header__stat" id="header__reachGraph"></div>
+                <div class="header__stat" id="header__relevanceGraph"></div>
+                <div class="header__stat" id="header__resonanceGraph"></div>
             </div>
             <div class="header__botones">
                 <div class="header__boton header__boton--salir">
@@ -206,33 +467,177 @@
                     <span>Audiencia</span>
                 </div>
                 <div class="audiencia__fakeReal">
-                    <div class="header__stats">
-                        <div class="header__stat">a</div>
-                        <div class="header__stat">b</div>
-                        <div class="header__stat">c</div>
+                    <div class="audiencia__fakeReal">
+                        <div class="audiencia__fakeReal--stat">
+                            Audiencia
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M14.754 10C15.72 10 16.504 10.784 16.504 11.75V16.499C16.504 17.6927 16.0298 18.8376 15.1857 19.6817C14.3416 20.5258 13.1967 21 12.003 21C10.8093 21 9.66441 20.5258 8.82031 19.6817C7.97621 18.8376 7.502 17.6927 7.502 16.499V11.75C7.502 10.784 8.285 10 9.252 10H14.754ZM7.131 10C6.77082 10.4335 6.55417 10.9681 6.511 11.53L6.501 11.75V16.499C6.501 17.346 6.693 18.148 7.035 18.864C6.44228 19.0226 5.82103 19.0427 5.21929 18.9228C4.61756 18.8029 4.05145 18.5463 3.56475 18.1727C3.07805 17.7991 2.68379 17.3185 2.41246 16.7682C2.14114 16.2179 2.00001 15.6126 2 14.999V11.75C2.00002 11.3108 2.16517 10.8877 2.46268 10.5646C2.76019 10.2415 3.1683 10.0421 3.606 10.006L3.75 10H7.131ZM16.875 10H20.25C21.216 10 22 10.784 22 11.75V15C22.0001 15.6132 21.8593 16.2182 21.5884 16.7682C21.3175 17.3183 20.9237 17.7987 20.4376 18.1724C19.9514 18.546 19.3858 18.8029 18.7846 18.9232C18.1833 19.0435 17.5625 19.0239 16.97 18.866C17.27 18.238 17.454 17.546 17.495 16.814L17.504 16.499V11.75C17.504 11.085 17.269 10.475 16.875 10ZM12 3C12.7956 3 13.5587 3.31607 14.1213 3.87868C14.6839 4.44129 15 5.20435 15 6C15 6.79565 14.6839 7.55871 14.1213 8.12132C13.5587 8.68393 12.7956 9 12 9C11.2044 9 10.4413 8.68393 9.87868 8.12132C9.31607 7.55871 9 6.79565 9 6C9 5.20435 9.31607 4.44129 9.87868 3.87868C10.4413 3.31607 11.2044 3 12 3ZM18.5 4C19.163 4 19.7989 4.26339 20.2678 4.73223C20.7366 5.20107 21 5.83696 21 6.5C21 7.16304 20.7366 7.79893 20.2678 8.26777C19.7989 8.73661 19.163 9 18.5 9C17.837 9 17.2011 8.73661 16.7322 8.26777C16.2634 7.79893 16 7.16304 16 6.5C16 5.83696 16.2634 5.20107 16.7322 4.73223C17.2011 4.26339 17.837 4 18.5 4ZM5.5 4C6.16304 4 6.79893 4.26339 7.26777 4.73223C7.73661 5.20107 8 5.83696 8 6.5C8 7.16304 7.73661 7.79893 7.26777 8.26777C6.79893 8.73661 6.16304 9 5.5 9C4.83696 9 4.20107 8.73661 3.73223 8.26777C3.26339 7.79893 3 7.16304 3 6.5C3 5.83696 3.26339 5.20107 3.73223 4.73223C4.20107 4.26339 4.83696 4 5.5 4Z" fill="#D9D9D9"/>
+                              </svg>
+                            <span>33.69 K</span>
+                        </div>
+                        <div class="audiencia__fakeReal--separador"></div>
+                        <div class="audiencia__fakeReal--stat">
+                            Seguidores Fake
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M14.754 10C15.72 10 16.504 10.784 16.504 11.75V16.499C16.504 17.6927 16.0298 18.8376 15.1857 19.6817C14.3416 20.5258 13.1967 21 12.003 21C10.8093 21 9.66441 20.5258 8.82031 19.6817C7.97621 18.8376 7.502 17.6927 7.502 16.499V11.75C7.502 10.784 8.285 10 9.252 10H14.754ZM7.131 10C6.77082 10.4335 6.55417 10.9681 6.511 11.53L6.501 11.75V16.499C6.501 17.346 6.693 18.148 7.035 18.864C6.44228 19.0226 5.82103 19.0427 5.21929 18.9228C4.61756 18.8029 4.05145 18.5463 3.56475 18.1727C3.07805 17.7991 2.68379 17.3185 2.41246 16.7682C2.14114 16.2179 2.00001 15.6126 2 14.999V11.75C2.00002 11.3108 2.16517 10.8877 2.46268 10.5646C2.76019 10.2415 3.1683 10.0421 3.606 10.006L3.75 10H7.131ZM16.875 10H20.25C21.216 10 22 10.784 22 11.75V15C22.0001 15.6132 21.8593 16.2182 21.5884 16.7682C21.3175 17.3183 20.9237 17.7987 20.4376 18.1724C19.9514 18.546 19.3858 18.8029 18.7846 18.9232C18.1833 19.0435 17.5625 19.0239 16.97 18.866C17.27 18.238 17.454 17.546 17.495 16.814L17.504 16.499V11.75C17.504 11.085 17.269 10.475 16.875 10ZM12 3C12.7956 3 13.5587 3.31607 14.1213 3.87868C14.6839 4.44129 15 5.20435 15 6C15 6.79565 14.6839 7.55871 14.1213 8.12132C13.5587 8.68393 12.7956 9 12 9C11.2044 9 10.4413 8.68393 9.87868 8.12132C9.31607 7.55871 9 6.79565 9 6C9 5.20435 9.31607 4.44129 9.87868 3.87868C10.4413 3.31607 11.2044 3 12 3ZM18.5 4C19.163 4 19.7989 4.26339 20.2678 4.73223C20.7366 5.20107 21 5.83696 21 6.5C21 7.16304 20.7366 7.79893 20.2678 8.26777C19.7989 8.73661 19.163 9 18.5 9C17.837 9 17.2011 8.73661 16.7322 8.26777C16.2634 7.79893 16 7.16304 16 6.5C16 5.83696 16.2634 5.20107 16.7322 4.73223C17.2011 4.26339 17.837 4 18.5 4ZM5.5 4C6.16304 4 6.79893 4.26339 7.26777 4.73223C7.73661 5.20107 8 5.83696 8 6.5C8 7.16304 7.73661 7.79893 7.26777 8.26777C6.79893 8.73661 6.16304 9 5.5 9C4.83696 9 4.20107 8.73661 3.73223 8.26777C3.26339 7.79893 3 7.16304 3 6.5C3 5.83696 3.26339 5.20107 3.73223 4.73223C4.20107 4.26339 4.83696 4 5.5 4Z" fill="#D9D9D9"/>
+                              </svg>
+                            <span>1.98 K</span>
+                        </div>
+                        <div class="audiencia__fakeReal--separador"></div>
+                        <div class="audiencia__fakeReal--stat">
+                            Audiencia Real
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M14.754 10C15.72 10 16.504 10.784 16.504 11.75V16.499C16.504 17.6927 16.0298 18.8376 15.1857 19.6817C14.3416 20.5258 13.1967 21 12.003 21C10.8093 21 9.66441 20.5258 8.82031 19.6817C7.97621 18.8376 7.502 17.6927 7.502 16.499V11.75C7.502 10.784 8.285 10 9.252 10H14.754ZM7.131 10C6.77082 10.4335 6.55417 10.9681 6.511 11.53L6.501 11.75V16.499C6.501 17.346 6.693 18.148 7.035 18.864C6.44228 19.0226 5.82103 19.0427 5.21929 18.9228C4.61756 18.8029 4.05145 18.5463 3.56475 18.1727C3.07805 17.7991 2.68379 17.3185 2.41246 16.7682C2.14114 16.2179 2.00001 15.6126 2 14.999V11.75C2.00002 11.3108 2.16517 10.8877 2.46268 10.5646C2.76019 10.2415 3.1683 10.0421 3.606 10.006L3.75 10H7.131ZM16.875 10H20.25C21.216 10 22 10.784 22 11.75V15C22.0001 15.6132 21.8593 16.2182 21.5884 16.7682C21.3175 17.3183 20.9237 17.7987 20.4376 18.1724C19.9514 18.546 19.3858 18.8029 18.7846 18.9232C18.1833 19.0435 17.5625 19.0239 16.97 18.866C17.27 18.238 17.454 17.546 17.495 16.814L17.504 16.499V11.75C17.504 11.085 17.269 10.475 16.875 10ZM12 3C12.7956 3 13.5587 3.31607 14.1213 3.87868C14.6839 4.44129 15 5.20435 15 6C15 6.79565 14.6839 7.55871 14.1213 8.12132C13.5587 8.68393 12.7956 9 12 9C11.2044 9 10.4413 8.68393 9.87868 8.12132C9.31607 7.55871 9 6.79565 9 6C9 5.20435 9.31607 4.44129 9.87868 3.87868C10.4413 3.31607 11.2044 3 12 3ZM18.5 4C19.163 4 19.7989 4.26339 20.2678 4.73223C20.7366 5.20107 21 5.83696 21 6.5C21 7.16304 20.7366 7.79893 20.2678 8.26777C19.7989 8.73661 19.163 9 18.5 9C17.837 9 17.2011 8.73661 16.7322 8.26777C16.2634 7.79893 16 7.16304 16 6.5C16 5.83696 16.2634 5.20107 16.7322 4.73223C17.2011 4.26339 17.837 4 18.5 4ZM5.5 4C6.16304 4 6.79893 4.26339 7.26777 4.73223C7.73661 5.20107 8 5.83696 8 6.5C8 7.16304 7.73661 7.79893 7.26777 8.26777C6.79893 8.73661 6.16304 9 5.5 9C4.83696 9 4.20107 8.73661 3.73223 8.26777C3.26339 7.79893 3 7.16304 3 6.5C3 5.83696 3.26339 5.20107 3.73223 4.73223C4.20107 4.26339 4.83696 4 5.5 4Z" fill="#D9D9D9"/>
+                              </svg>
+                            <span>32.93 K</span>
+                        </div>
                     </div>
                 </div>
+                <div class="graficaV2__contenedor">
+                    <span>Distribucion por edad</span>
+                    <div class="graficaV2__grafica" id="grafica__distribucionEdad">
+
+                    </div>
+                </div>
+                <div class="audiencia__generoYPais">
+
+                        <div class="graficaV2__contenedor">
+                            <span>Distribucion por genero</span>
+                            <div class="graficaV2__grafica" id="grafica__distribucionGenero">
+        
+                            </div>
+                        </div>
+                        <div class="graficaV2__contenedor">
+                            <span>Distribucion por pais</span>
+                            <div class="graficaV2__grafica" id="grafica__distribucionPais">
+        
+                            </div>
+                        </div>
+                </div>
+                
             </div>
             <div class="publicaciones">
                 <div class="parte-2__titulo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="31"
-                        height="28" viewBox="0 0 31 28" fill="none">
-                        <path
-                            d="M19.2976 10.8889C20.7466 10.8889 21.9226 12.1084 21.9226 13.6111V20.9984C21.9226 22.8554 21.2113 24.6362 19.9452 25.9493C18.679 27.2623 16.9617 28 15.1711 28C13.3805 28 11.6632 27.2623 10.3971 25.9493C9.13094 24.6362 8.41963 22.8554 8.41963 20.9984V13.6111C8.41963 12.1084 9.59413 10.8889 11.0446 10.8889H19.2976ZM7.86313 10.8889C7.32286 11.5632 6.99788 12.3948 6.93313 13.2689L6.91813 13.6111V20.9984C6.91813 22.316 7.20613 23.5636 7.71913 24.6773C6.83005 24.924 5.89818 24.9553 4.99557 24.7688C4.09296 24.5823 3.2438 24.1831 2.51375 23.6019C1.78369 23.0208 1.19231 22.2733 0.785321 21.4172C0.378332 20.5612 0.166644 19.6195 0.166626 18.6651V13.6111C0.166651 12.9279 0.414382 12.2697 0.860646 11.7672C1.30691 11.2646 1.91908 10.9544 2.57563 10.8982L2.79163 10.8889H7.86313ZM22.4791 10.8889H27.5416C28.9906 10.8889 30.1666 12.1084 30.1666 13.6111V18.6667C30.1668 19.6205 29.9556 20.5616 29.5492 21.4172C29.1428 22.2729 28.5522 23.0202 27.823 23.6015C27.0937 24.1827 26.2454 24.5823 25.3435 24.7694C24.4416 24.9565 23.5104 24.9261 22.6216 24.6804C23.0716 23.7036 23.3476 22.6271 23.4091 21.4884L23.4226 20.9984V13.6111C23.4226 12.5767 23.0701 11.6278 22.4791 10.8889ZM15.1666 0C16.3601 0 17.5047 0.491665 18.3486 1.36684C19.1925 2.242 19.6666 3.42899 19.6666 4.66667C19.6666 5.90434 19.1925 7.09133 18.3486 7.9665C17.5047 8.84167 16.3601 9.33333 15.1666 9.33333C13.9732 9.33333 12.8286 8.84167 11.9846 7.9665C11.1407 7.09133 10.6666 5.90434 10.6666 4.66667C10.6666 3.42899 11.1407 2.242 11.9846 1.36684C12.8286 0.491665 13.9732 0 15.1666 0ZM24.9166 1.55556C25.9112 1.55556 26.865 1.96528 27.5683 2.69458C28.2715 3.42389 28.6666 4.41305 28.6666 5.44444C28.6666 6.47584 28.2715 7.465 27.5683 8.1943C26.865 8.92361 25.9112 9.33333 24.9166 9.33333C23.9221 9.33333 22.9682 8.92361 22.265 8.1943C21.5617 7.465 21.1666 6.47584 21.1666 5.44444C21.1666 4.41305 21.5617 3.42389 22.265 2.69458C22.9682 1.96528 23.9221 1.55556 24.9166 1.55556ZM5.41663 1.55556C6.41119 1.55556 7.36502 1.96528 8.06828 2.69458C8.77154 3.42389 9.16663 4.41305 9.16663 5.44444C9.16663 6.47584 8.77154 7.465 8.06828 8.1943C7.36502 8.92361 6.41119 9.33333 5.41663 9.33333C4.42206 9.33333 3.46824 8.92361 2.76498 8.1943C2.06171 7.465 1.66663 6.47584 1.66663 5.44444C1.66663 4.41305 2.06171 3.42389 2.76498 2.69458C3.46824 1.96528 4.42206 1.55556 5.41663 1.55556Z"
-                            fill="white" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g fill="white"><path d="M10.5 8.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0z"/><path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1a.5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0z"/></g></svg>
+
                     <span>Publicaciones</span>
                 </div>
+                <div class="graficaV2__contenedor">
+                    <span>Distribucion de su publicacion por territorios</span>
+                    <div class="graficaV2__grafica" id="grafica__distribucionTerritorios">
+
+                    </div>
+                </div>
+                <div class="graficaV2__contenedor">
+                    <span>Franja horaria de sus publicaciones</span>
+                    <div class="graficaV2__grafica" id="grafica__distribucionFranjaPublicaciones">
+
+                    </div>
+                </div>
+                <div class="publicaciones__marcasTrabajado">
+                    <span>Marcas con las que ha trabajado</span>
+                    <div class="publicaciones__marcasTrabajado--marcas">
+                        <div class="publicaciones__marcasTrabajado--marcas-marca">
+                            <img src="https://logotipoz.com/wp-content/uploads/2022/03/netflix-logo.png" alt="Logo netflix">
+                            Netflix
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="desempeño">
+            <div class="desempenyo">
                 <div class="parte-2__titulo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="31"
-                        height="28" viewBox="0 0 31 28" fill="none">
-                        <path
-                            d="M19.2976 10.8889C20.7466 10.8889 21.9226 12.1084 21.9226 13.6111V20.9984C21.9226 22.8554 21.2113 24.6362 19.9452 25.9493C18.679 27.2623 16.9617 28 15.1711 28C13.3805 28 11.6632 27.2623 10.3971 25.9493C9.13094 24.6362 8.41963 22.8554 8.41963 20.9984V13.6111C8.41963 12.1084 9.59413 10.8889 11.0446 10.8889H19.2976ZM7.86313 10.8889C7.32286 11.5632 6.99788 12.3948 6.93313 13.2689L6.91813 13.6111V20.9984C6.91813 22.316 7.20613 23.5636 7.71913 24.6773C6.83005 24.924 5.89818 24.9553 4.99557 24.7688C4.09296 24.5823 3.2438 24.1831 2.51375 23.6019C1.78369 23.0208 1.19231 22.2733 0.785321 21.4172C0.378332 20.5612 0.166644 19.6195 0.166626 18.6651V13.6111C0.166651 12.9279 0.414382 12.2697 0.860646 11.7672C1.30691 11.2646 1.91908 10.9544 2.57563 10.8982L2.79163 10.8889H7.86313ZM22.4791 10.8889H27.5416C28.9906 10.8889 30.1666 12.1084 30.1666 13.6111V18.6667C30.1668 19.6205 29.9556 20.5616 29.5492 21.4172C29.1428 22.2729 28.5522 23.0202 27.823 23.6015C27.0937 24.1827 26.2454 24.5823 25.3435 24.7694C24.4416 24.9565 23.5104 24.9261 22.6216 24.6804C23.0716 23.7036 23.3476 22.6271 23.4091 21.4884L23.4226 20.9984V13.6111C23.4226 12.5767 23.0701 11.6278 22.4791 10.8889ZM15.1666 0C16.3601 0 17.5047 0.491665 18.3486 1.36684C19.1925 2.242 19.6666 3.42899 19.6666 4.66667C19.6666 5.90434 19.1925 7.09133 18.3486 7.9665C17.5047 8.84167 16.3601 9.33333 15.1666 9.33333C13.9732 9.33333 12.8286 8.84167 11.9846 7.9665C11.1407 7.09133 10.6666 5.90434 10.6666 4.66667C10.6666 3.42899 11.1407 2.242 11.9846 1.36684C12.8286 0.491665 13.9732 0 15.1666 0ZM24.9166 1.55556C25.9112 1.55556 26.865 1.96528 27.5683 2.69458C28.2715 3.42389 28.6666 4.41305 28.6666 5.44444C28.6666 6.47584 28.2715 7.465 27.5683 8.1943C26.865 8.92361 25.9112 9.33333 24.9166 9.33333C23.9221 9.33333 22.9682 8.92361 22.265 8.1943C21.5617 7.465 21.1666 6.47584 21.1666 5.44444C21.1666 4.41305 21.5617 3.42389 22.265 2.69458C22.9682 1.96528 23.9221 1.55556 24.9166 1.55556ZM5.41663 1.55556C6.41119 1.55556 7.36502 1.96528 8.06828 2.69458C8.77154 3.42389 9.16663 4.41305 9.16663 5.44444C9.16663 6.47584 8.77154 7.465 8.06828 8.1943C7.36502 8.92361 6.41119 9.33333 5.41663 9.33333C4.42206 9.33333 3.46824 8.92361 2.76498 8.1943C2.06171 7.465 1.66663 6.47584 1.66663 5.44444C1.66663 4.41305 2.06171 3.42389 2.76498 2.69458C3.46824 1.96528 4.42206 1.55556 5.41663 1.55556Z"
-                            fill="white" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="white"><path d="M22 5a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z"/><path fill-rule="evenodd" d="M15.612 2.038C14.59 2 13.399 2 12 2C7.286 2 4.929 2 3.464 3.464C2 4.93 2 7.286 2 12c0 4.714 0 7.071 1.464 8.535C4.93 22 7.286 22 12 22c4.714 0 7.071 0 8.535-1.465C22 19.072 22 16.714 22 12c0-1.399 0-2.59-.038-3.612a4.5 4.5 0 0 1-6.35-6.35Zm1.868 7.386a.75.75 0 0 1 .096 1.056l-1.829 2.195c-.328.394-.624.75-.9 1c-.302.27-.68.513-1.18.513c-.5 0-.879-.242-1.18-.514c-.276-.25-.572-.605-.901-1l-.292-.35c-.371-.445-.599-.716-.787-.885a.767.767 0 0 0-.163-.122l-.01-.005l-.005.002l-.007.003a.764.764 0 0 0-.163.122c-.187.17-.415.44-.786.885L7.576 14.48a.75.75 0 0 1-1.152-.96l1.829-2.195c.328-.394.624-.75.9-1c.302-.27.68-.513 1.18-.513c.5 0 .879.242 1.18.514c.276.25.572.605.901 1l.292.35c.371.445.599.716.787.885c.086.078.138.11.163.122l.003.001a.158.158 0 0 0 .008.004l.01-.005a.764.764 0 0 0 .164-.122c.187-.17.415-.44.786-.885l1.797-2.156a.75.75 0 0 1 1.056-.096Z" clip-rule="evenodd"/></g></svg>
                     <span>Desempeño</span>
+                </div>
+                <div class="desempenyo__audienciaAlcance">
+                    <div class="desempenyo__audienciaAlcance--stat">
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M14.754 10C15.72 10 16.504 10.784 16.504 11.75V16.499C16.504 17.6927 16.0298 18.8376 15.1857 19.6817C14.3416 20.5258 13.1967 21 12.003 21C10.8093 21 9.66441 20.5258 8.82031 19.6817C7.97621 18.8376 7.502 17.6927 7.502 16.499V11.75C7.502 10.784 8.285 10 9.252 10H14.754ZM7.131 10C6.77082 10.4335 6.55417 10.9681 6.511 11.53L6.501 11.75V16.499C6.501 17.346 6.693 18.148 7.035 18.864C6.44228 19.0226 5.82103 19.0427 5.21929 18.9228C4.61756 18.8029 4.05145 18.5463 3.56475 18.1727C3.07805 17.7991 2.68379 17.3185 2.41246 16.7682C2.14114 16.2179 2.00001 15.6126 2 14.999V11.75C2.00002 11.3108 2.16517 10.8877 2.46268 10.5646C2.76019 10.2415 3.1683 10.0421 3.606 10.006L3.75 10H7.131ZM16.875 10H20.25C21.216 10 22 10.784 22 11.75V15C22.0001 15.6132 21.8593 16.2182 21.5884 16.7682C21.3175 17.3183 20.9237 17.7987 20.4376 18.1724C19.9514 18.546 19.3858 18.8029 18.7846 18.9232C18.1833 19.0435 17.5625 19.0239 16.97 18.866C17.27 18.238 17.454 17.546 17.495 16.814L17.504 16.499V11.75C17.504 11.085 17.269 10.475 16.875 10ZM12 3C12.7956 3 13.5587 3.31607 14.1213 3.87868C14.6839 4.44129 15 5.20435 15 6C15 6.79565 14.6839 7.55871 14.1213 8.12132C13.5587 8.68393 12.7956 9 12 9C11.2044 9 10.4413 8.68393 9.87868 8.12132C9.31607 7.55871 9 6.79565 9 6C9 5.20435 9.31607 4.44129 9.87868 3.87868C10.4413 3.31607 11.2044 3 12 3ZM18.5 4C19.163 4 19.7989 4.26339 20.2678 4.73223C20.7366 5.20107 21 5.83696 21 6.5C21 7.16304 20.7366 7.79893 20.2678 8.26777C19.7989 8.73661 19.163 9 18.5 9C17.837 9 17.2011 8.73661 16.7322 8.26777C16.2634 7.79893 16 7.16304 16 6.5C16 5.83696 16.2634 5.20107 16.7322 4.73223C17.2011 4.26339 17.837 4 18.5 4ZM5.5 4C6.16304 4 6.79893 4.26339 7.26777 4.73223C7.73661 5.20107 8 5.83696 8 6.5C8 7.16304 7.73661 7.79893 7.26777 8.26777C6.79893 8.73661 6.16304 9 5.5 9C4.83696 9 4.20107 8.73661 3.73223 8.26777C3.26339 7.79893 3 7.16304 3 6.5C3 5.83696 3.26339 5.20107 3.73223 4.73223C4.20107 4.26339 4.83696 4 5.5 4Z" fill="#D9D9D9"/>
+                            </svg>
+                            Audiencia
+                        </div>
+                        <span>33.60 K</span>
+                    </div>
+                    <div class="desempenyo__audienciaAlcance--stat">
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+                            Alcance
+                        </div>
+                        <span>9.06 K</span>
+                    </div>
+                </div>
+                <div class="desempenyo__graficaV1">
+                    <div class="desempenyo__graficaV1--titulo" id="graficaImpresiones">
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M18 14h-7.5l2-2H18M6 14v-2.5l6.88-6.86c.19-.19.51-.19.71 0l1.76 1.77c.2.2.2.51 0 .71L8.47 14M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/></svg>
+                        Impresiones
+                        </div>
+                        <span>28.34 K</span>
+                    </div>
+                    <div class="desempenyo__graficaV1--AlcanceAudiencia">
+                        <div class="desempenyo__graficaV1--porcentaje">
+                            <span>312.76%</span>
+                            Alcance
+                        </div>
+
+                        <div class="desempenyo__graficaV1--separador"></div>
+                        
+                        <div class="desempenyo__graficaV1--porcentaje">
+                            <span>84.34%</span>
+                            Audiencia
+                        </div>
+                    </div>
+                </div>
+                <div class="desempenyo__graficaV1">
+                    <div class="desempenyo__graficaV1--titulo" id="graficaImpresiones">
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M18 14h-7.5l2-2H18M6 14v-2.5l6.88-6.86c.19-.19.51-.19.71 0l1.76 1.77c.2.2.2.51 0 .71L8.47 14M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/></svg>
+                        Reproducciones
+                        </div>
+                        <span>16.64 K</span>
+                    </div>
+                    <div class="desempenyo__graficaV1--AlcanceAudiencia">
+                        <div class="desempenyo__graficaV1--porcentaje">
+                            <span>183.76%</span>
+                            Alcance
+                        </div>
+
+                        <div class="desempenyo__graficaV1--separador"></div>
+                        
+                        <div class="desempenyo__graficaV1--porcentaje">
+                            <span>49.34%</span>
+                            Audiencia
+                        </div>
+                    </div>
+                </div>
+                <div class="desempenyo__graficaV1">
+                    <div class="desempenyo__graficaV1--titulo" id="graficaImpresiones">
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M18 14h-7.5l2-2H18M6 14v-2.5l6.88-6.86c.19-.19.51-.19.71 0l1.76 1.77c.2.2.2.51 0 .71L8.47 14M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/></svg>
+                        Engagement
+                        </div>
+                        <span>28.34 K</span>
+                    </div>
+                    <div class="desempenyo__graficaV1--AlcanceAudiencia">
+                        <div class="desempenyo__graficaV1--porcentaje">
+                            <span>20.97%</span>
+                            Alcance
+                        </div>
+
+                        <div class="desempenyo__graficaV1--separador"></div>
+                        
+                        <div class="desempenyo__graficaV1--porcentaje">
+                            <span>5.42%</span>
+                            Audiencia
+                        </div>
+                    </div>
+                </div>
+                <div class="graficaV2__contenedor">
+                    <span>Ratio de reproducciones segun dia de publicacion</span>
+                    <div class="graficaV2__grafica" id="grafica__ratioSegunDia">
+
+                    </div>
                 </div>
             </div>
         </main>

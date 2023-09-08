@@ -150,12 +150,12 @@ aside {
     transition: 0.3s;
 }
 
-.influcard__perfil--pulsar a{
+#verInflucard{
     text-decoration: none;
     color: #fff;
 }
 
-.influcard__perfil--pulsar a:active{
+#verInflucard:active{
     text-decoration: none;
     color: #FFF;
 }

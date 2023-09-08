@@ -31,14 +31,15 @@ export function creaInflucard(params) {
 
     const pulsarDiv = document.createElement('div');
     pulsarDiv.className = 'influcard__perfil--pulsar';
+    pulsarDiv.textContent = 'Ver influcard';
     const pulsarLink = document.createElement('a');
     pulsarLink.href = '#';
     pulsarLink.id = 'verInflucard';
-    pulsarLink.textContent = 'Ver influcard';
-    pulsarDiv.appendChild(pulsarLink);
+    //pulsarDiv.appendChild(pulsarLink);
+    pulsarLink.appendChild(pulsarDiv);
 
     imgContainerDiv.appendChild(img);
-    imgContainerDiv.appendChild(pulsarDiv);
+    imgContainerDiv.appendChild(pulsarLink);
 
     perfilDiv.appendChild(imgContainerDiv);
 
