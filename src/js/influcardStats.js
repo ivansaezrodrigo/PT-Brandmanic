@@ -97,7 +97,7 @@ makeCircularChart('polarArea', distribucionFranjaPublicaciones, rangoDiaTitulo, 
 ])
 
 const contenedorMarcas = document.getElementById('publicaciones__marcasContenedor');
-const arrayMarcas = data['influcard']['brands_images'].slice(0,8).map(marca => {
+var arrayMarcas = data['influcard']['brands_images'].slice(0,8).map(marca => {
     const nuevaMarca = creaMarca(marca.name,marca.image)
     contenedorMarcas.appendChild(nuevaMarca);
 })
@@ -141,12 +141,27 @@ engagementAudiencia.innerText = Math.round(data['influcard']['er_audiencia'] * 1
 const capturarBoton = document.getElementById('descargarBoton');
 
 capturarBoton.addEventListener('click', () => {
+    while (contenedorMarcas.firstChild) {
+        contenedorMarcas.removeChild(contenedorMarcas.firstChild);
+    }
+
+
+    arrayMarcas = data['influcard']['brands_images'].map(marca => {
+        const nuevaMarca = creaMarca(marca.name, marca.image);
+        contenedorMarcas.appendChild(nuevaMarca);
+    });
+
     hacerCaptura(username.textContent)
+
+    while (contenedorMarcas.firstChild) {
+        contenedorMarcas.removeChild(contenedorMarcas.firstChild);
+    }
+
+    arrayMarcas = data['influcard']['brands_images'].slice(0, 8).map(marca => {
+        const nuevaMarca = creaMarca(marca.name, marca.image);
+        contenedorMarcas.appendChild(nuevaMarca);
+    });
 });
 
 
-
-
-
-
-//console.log('Gracias por su tiempo :)\nAtte: Ivan Saez Rodrigo')
+console.log('Gracias por su tiempo :)\nAtte: Ivan Saez Rodrigo')
