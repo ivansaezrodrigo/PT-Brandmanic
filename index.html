@@ -1,169 +1,407 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Brandmanic - Ivan Saez Rodrigo</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-        <link rel="stylesheet" href="./src/css/style.css">
-        <link rel="shortcut icon" href="./src/img/ico.png">
-    </head>
-    <body>
-        <aside>
-            <img id="brandmanicLogo" src="./src/img/brandmanicLogo.png" alt="Logo brandmanic" class="logo">
-            <div class="aside__botones">
-                <div class="boton boton__salir">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="42" viewBox="0 0 43 42" fill="none">
-                        <g clip-path="url(#clip0_8_74)">
-                            <path d="M5.99523 19.145C5.50365 19.6372 5.22754 20.3044 5.22754 21C5.22754 21.6956 5.50365 22.3628 5.99523 22.855L15.8932 32.7565C16.1371 33.0003 16.4265 33.1937 16.7451 33.3257C17.0637 33.4577 17.4051 33.5256 17.75 33.5256C18.0948 33.5256 18.4363 33.4577 18.7548 33.3257C19.0734 33.1937 19.3629 33.0003 19.6067 32.7565C19.8506 32.5127 20.044 32.2232 20.1759 31.9046C20.3079 31.586 20.3758 31.2446 20.3758 30.8997C20.3758 30.5549 20.3079 30.2135 20.1759 29.8949C20.044 29.5763 19.8506 29.2868 19.6067 29.043L14.1887 23.625H34.375C35.0712 23.625 35.7388 23.3484 36.2311 22.8561C36.7234 22.3639 37 21.6962 37 21C37 20.3038 36.7234 19.6361 36.2311 19.1438C35.7388 18.6516 35.0712 18.375 34.375 18.375H14.1887L19.6067 12.957C20.0989 12.4645 20.3754 11.7967 20.3752 11.1005C20.375 10.4042 20.0983 9.73657 19.6059 9.24436C19.1134 8.75215 18.4456 8.47573 17.7494 8.47589C17.0531 8.47606 16.3854 8.7528 15.8932 9.24524L5.99523 19.145Z" fill="white"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_8_74">
-                            <rect width="42" height="42" fill="white" transform="translate(0.25)"/>
-                            </clipPath>
-                        </defs>
-                        </svg> 
-                    Salir   
-                </div>
-                <div class="boton boton__limpiar">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
-                    <path d="M26.75 20H20.75V18H26.75V20ZM30.75 28H24.75V26H30.75V28ZM28.75 24H22.75V22H28.75V24Z" fill="#F8F8F8"/>
-                    <path d="M17.753 20C17.746 19.1562 17.5209 18.3286 17.0997 17.5974C16.6785 16.8662 16.0754 16.2564 15.349 15.827L22.75 3L21.02 2L13.443 15.126C12.5131 14.9183 11.546 14.947 10.63 15.2096C9.71411 15.4721 8.87863 15.9602 8.20002 16.629C4.45602 20.24 4.74602 28.682 4.76002 29.04C4.77035 29.2982 4.88026 29.5424 5.06669 29.7214C5.25311 29.9004 5.50159 30.0002 5.76002 30H20.751C20.9609 30 21.1655 29.934 21.3357 29.8112C21.506 29.6885 21.6333 29.5153 21.6997 29.3162C21.7661 29.1171 21.7681 28.9022 21.7055 28.7018C21.643 28.5015 21.5189 28.3259 21.351 28.2C17.811 25.544 17.753 20.054 17.753 20ZM12.68 16.997C13.4804 17.0058 14.2466 17.3228 14.8191 17.8822C15.3917 18.4415 15.7265 19.2001 15.754 20C15.754 20.038 15.756 20.208 15.771 20.469L9.87102 17.845C10.2597 17.5245 10.7081 17.2845 11.1904 17.1389C11.6726 16.9934 12.179 16.9451 12.68 16.997ZM16.2 28C15.4007 27.1861 14.8912 26.132 14.75 25H12.75C12.8216 26.0643 13.1541 27.0946 13.718 28H11.495C11.0838 26.7022 10.8336 25.3588 10.75 24H8.75002C8.81451 25.3547 9.0377 26.6973 9.41502 28H6.75002C6.78102 26.164 7.04002 22.108 8.55302 19.447L16.086 22.797C16.4479 24.6763 17.2196 26.4528 18.346 28H16.2Z" fill="#F8F8F8"/>
-                    </svg>
-                    Limpiar    
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivan Saez Rodrigo - Brandmanic</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="shortcut icon" href="./src/img/ico.png" />
+  </head>
+  <body>
+    <aside>
+      <img
+        id="brandmanicLogo"
+        src="./src/img/brandmanicLogo.png"
+        alt="Logo brandmanic"
+        class="logo"
+      />
+      <div class="aside__botones">
+        <div class="boton boton__salir">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="43"
+            height="42"
+            viewBox="0 0 43 42"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_8_74)">
+              <path
+                d="M5.99523 19.145C5.50365 19.6372 5.22754 20.3044 5.22754 21C5.22754 21.6956 5.50365 22.3628 5.99523 22.855L15.8932 32.7565C16.1371 33.0003 16.4265 33.1937 16.7451 33.3257C17.0637 33.4577 17.4051 33.5256 17.75 33.5256C18.0948 33.5256 18.4363 33.4577 18.7548 33.3257C19.0734 33.1937 19.3629 33.0003 19.6067 32.7565C19.8506 32.5127 20.044 32.2232 20.1759 31.9046C20.3079 31.586 20.3758 31.2446 20.3758 30.8997C20.3758 30.5549 20.3079 30.2135 20.1759 29.8949C20.044 29.5763 19.8506 29.2868 19.6067 29.043L14.1887 23.625H34.375C35.0712 23.625 35.7388 23.3484 36.2311 22.8561C36.7234 22.3639 37 21.6962 37 21C37 20.3038 36.7234 19.6361 36.2311 19.1438C35.7388 18.6516 35.0712 18.375 34.375 18.375H14.1887L19.6067 12.957C20.0989 12.4645 20.3754 11.7967 20.3752 11.1005C20.375 10.4042 20.0983 9.73657 19.6059 9.24436C19.1134 8.75215 18.4456 8.47573 17.7494 8.47589C17.0531 8.47606 16.3854 8.7528 15.8932 9.24524L5.99523 19.145Z"
+                fill="white"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_8_74">
+                <rect
+                  width="42"
+                  height="42"
+                  fill="white"
+                  transform="translate(0.25)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+          Salir
+        </div>
+        <div class="boton boton__limpiar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="32"
+            viewBox="0 0 33 32"
+            fill="none"
+          >
+            <path
+              d="M26.75 20H20.75V18H26.75V20ZM30.75 28H24.75V26H30.75V28ZM28.75 24H22.75V22H28.75V24Z"
+              fill="#F8F8F8"
+            />
+            <path
+              d="M17.753 20C17.746 19.1562 17.5209 18.3286 17.0997 17.5974C16.6785 16.8662 16.0754 16.2564 15.349 15.827L22.75 3L21.02 2L13.443 15.126C12.5131 14.9183 11.546 14.947 10.63 15.2096C9.71411 15.4721 8.87863 15.9602 8.20002 16.629C4.45602 20.24 4.74602 28.682 4.76002 29.04C4.77035 29.2982 4.88026 29.5424 5.06669 29.7214C5.25311 29.9004 5.50159 30.0002 5.76002 30H20.751C20.9609 30 21.1655 29.934 21.3357 29.8112C21.506 29.6885 21.6333 29.5153 21.6997 29.3162C21.7661 29.1171 21.7681 28.9022 21.7055 28.7018C21.643 28.5015 21.5189 28.3259 21.351 28.2C17.811 25.544 17.753 20.054 17.753 20ZM12.68 16.997C13.4804 17.0058 14.2466 17.3228 14.8191 17.8822C15.3917 18.4415 15.7265 19.2001 15.754 20C15.754 20.038 15.756 20.208 15.771 20.469L9.87102 17.845C10.2597 17.5245 10.7081 17.2845 11.1904 17.1389C11.6726 16.9934 12.179 16.9451 12.68 16.997ZM16.2 28C15.4007 27.1861 14.8912 26.132 14.75 25H12.75C12.8216 26.0643 13.1541 27.0946 13.718 28H11.495C11.0838 26.7022 10.8336 25.3588 10.75 24H8.75002C8.81451 25.3547 9.0377 26.6973 9.41502 28H6.75002C6.78102 26.164 7.04002 22.108 8.55302 19.447L16.086 22.797C16.4479 24.6763 17.2196 26.4528 18.346 28H16.2Z"
+              fill="#F8F8F8"
+            />
+          </svg>
+          Limpiar
+        </div>
+      </div>
 
-            <div class="filtros">
-                <button class="filtro">
-                    Tags
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-                        <path d="M30.5 12.5L16.5 24.5L2.5 12.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                </button>
-                <button class="filtro">
-                    Hashtags
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-                        <path d="M30.5 12.5L16.5 24.5L2.5 12.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                </button>
-                <button class="filtro">
-                    Menciones
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-                        <path d="M30.5 12.5L16.5 24.5L2.5 12.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                </button>
+      <div class="filtros">
+        <button class="filtro">
+          Tags
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+          >
+            <path
+              d="M30.5 12.5L16.5 24.5L2.5 12.5"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button class="filtro">
+          Hashtags
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+          >
+            <path
+              d="M30.5 12.5L16.5 24.5L2.5 12.5"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button class="filtro">
+          Menciones
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+          >
+            <path
+              d="M30.5 12.5L16.5 24.5L2.5 12.5"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
 
-                <button class="filtro">
-                    Ordenar
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-                        <path d="M30.5 12.5L16.5 24.5L2.5 12.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                </button>
-            </div>
+        <button class="filtro">
+          Ordenar
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+          >
+            <path
+              d="M30.5 12.5L16.5 24.5L2.5 12.5"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
 
-            <span class="filtros__seccion">Cuenta</span>
+      <span class="filtros__seccion">Cuenta</span>
 
-            <div class="filtros">
-                <button class="filtro">
-                    Paises
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-                        <path d="M30.5 12.5L16.5 24.5L2.5 12.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                </button>
-                <button class="filtro">
-                    Genero
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-                        <path d="M30.5 12.5L16.5 24.5L2.5 12.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                </button>
-                <div class="filtro__minmax">
-                    <label for="minEdad">Edad</label>
-                    <div class="filtro__minmax--form">
-                        <button class="filtro__minmax--boton">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                <path d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z" fill="#F8F8F8"/>
-                              </svg>
-                        </button>
-                        <input class="filtro__minmax--inputCenter" type="text" name="minEdad" id="minEdad" placeholder="Min">
-                        <input class="filtro__minmax--inputRight" type="text" name="maxEdad" id="maxEdad" placeholder="Max">
-                    </div>
-                </div>
-                <button class="filtro">
-                    Territorio
-                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
-                        <path d="M30.5 12.5L16.5 24.5L2.5 12.5" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                </button>
-                <div class="filtro__minmax">
-                    <label for="minFollowers">Followers</label>
-                    <div class="filtro__minmax--form">
-                        <button class="filtro__minmax--boton">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                <path d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z" fill="#F8F8F8"/>
-                              </svg>
-                        </button>
-                        <input class="filtro__minmax--inputCenter" type="text" name="minFollowers" id="minFollowers" placeholder="Min">
-                        <input class="filtro__minmax--inputRight" type="text" name="maxFollowers" id="maxFollowers" placeholder="Max">
-                    </div>
-                </div>
-                <div class="filtro__minmax">
-                    <label for="minEngagement">Engagement</label>
-                    <div class="filtro__minmax--form">
-                        <button class="filtro__minmax--boton">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                <path d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z" fill="#F8F8F8"/>
-                              </svg>
-                        </button>
-                        <input class="filtro__minmax--inputCenter" type="text" name="minEngagement" id="minEngagement" placeholder="Min">
-                        <input class="filtro__minmax--inputRight" type="text" name="maxEngagement" id="maxEngagement" placeholder="Max">
-                    </div>
-                </div>
-                <div class="filtro__minmax">
-                    <label for="minEngagementRate">Eng Rate</label>
-                    <div class="filtro__minmax--form">
-                        <button class="filtro__minmax--boton">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                <path d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z" fill="#F8F8F8"/>
-                              </svg>
-                        </button>
-                        <input class="filtro__minmax--inputCenter" type="text" name="minEngagementRate" id="minEngagementRate" placeholder="Min">
-                        <input class="filtro__minmax--inputRight" type="text" name="maxEngagementRate" id="maxEngagementRate" placeholder="Max">
-                    </div>
-                </div>
-                <div class="filtro__minmax">
-                    <label for="minImpresiones">Impresiones</label>
-                    <div class="filtro__minmax--form">
-                        <button class="filtro__minmax--boton">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                                <path d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z" fill="#F8F8F8"/>
-                              </svg>
-                        </button>
-                        <input class="filtro__minmax--inputCenter" type="text" name="minImpresiones" id="minImpresiones" placeholder="Min">
-                        <input class="filtro__minmax--inputRight" type="text" name="maxImpresiones" id="maxImpresiones" placeholder="Max">
-                    </div>
-                </div>
-            </div>
-
-        </aside>
-        <main class="parte-1">
-            <h2>
-                Resultados 8 cuentas
-            </h2>
-            <div class="main__buscar">
-                <button class="main__buscar--boton">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <path d="M6.75 0.25C8.47391 0.25 10.1272 0.934819 11.3462 2.15381C12.5652 3.37279 13.25 5.02609 13.25 6.75C13.25 8.36 12.66 9.84 11.69 10.98L11.96 11.25H12.75L17.75 16.25L16.25 17.75L11.25 12.75V11.96L10.98 11.69C9.80055 12.6968 8.30071 13.2499 6.75 13.25C5.02609 13.25 3.37279 12.5652 2.15381 11.3462C0.934819 10.1272 0.25 8.47391 0.25 6.75C0.25 5.02609 0.934819 3.37279 2.15381 2.15381C3.37279 0.934819 5.02609 0.25 6.75 0.25ZM6.75 2.25C4.25 2.25 2.25 4.25 2.25 6.75C2.25 9.25 4.25 11.25 6.75 11.25C9.25 11.25 11.25 9.25 11.25 6.75C11.25 4.25 9.25 2.25 6.75 2.25Z" fill="black"/>
-                      </svg>
-                </button>
-                <input class="main__buscar--input" type="text" name="buscar" id="buscar" placeholder="Buscar">
-            </div>
-            <div class="influcards" id="influcards">
-                <!-- Aqui añado los influencers por Javascript con el metodo influcard.js como si de un componente se tratase -->
-            </div>
-        </main>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-    <script type="module" src="./src/js/index.js"></script>
+      <div class="filtros">
+        <button class="filtro">
+          Paises
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+          >
+            <path
+              d="M30.5 12.5L16.5 24.5L2.5 12.5"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button class="filtro">
+          Genero
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+          >
+            <path
+              d="M30.5 12.5L16.5 24.5L2.5 12.5"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="filtro__minmax">
+          <label for="minEdad">Edad</label>
+          <div class="filtro__minmax--form">
+            <button class="filtro__minmax--boton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="19"
+                viewBox="0 0 18 19"
+                fill="none"
+              >
+                <path
+                  d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z"
+                  fill="#F8F8F8"
+                />
+              </svg>
+            </button>
+            <input
+              class="filtro__minmax--inputCenter"
+              type="text"
+              name="minEdad"
+              id="minEdad"
+              placeholder="Min"
+            />
+            <input
+              class="filtro__minmax--inputRight"
+              type="text"
+              name="maxEdad"
+              id="maxEdad"
+              placeholder="Max"
+            />
+          </div>
+        </div>
+        <button class="filtro">
+          Territorio
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="33"
+            viewBox="0 0 33 33"
+            fill="none"
+          >
+            <path
+              d="M30.5 12.5L16.5 24.5L2.5 12.5"
+              stroke="#111111"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="filtro__minmax">
+          <label for="minFollowers">Followers</label>
+          <div class="filtro__minmax--form">
+            <button class="filtro__minmax--boton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="19"
+                viewBox="0 0 18 19"
+                fill="none"
+              >
+                <path
+                  d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z"
+                  fill="#F8F8F8"
+                />
+              </svg>
+            </button>
+            <input
+              class="filtro__minmax--inputCenter"
+              type="text"
+              name="minFollowers"
+              id="minFollowers"
+              placeholder="Min"
+            />
+            <input
+              class="filtro__minmax--inputRight"
+              type="text"
+              name="maxFollowers"
+              id="maxFollowers"
+              placeholder="Max"
+            />
+          </div>
+        </div>
+        <div class="filtro__minmax">
+          <label for="minEngagement">Engagement</label>
+          <div class="filtro__minmax--form">
+            <button class="filtro__minmax--boton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="19"
+                viewBox="0 0 18 19"
+                fill="none"
+              >
+                <path
+                  d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z"
+                  fill="#F8F8F8"
+                />
+              </svg>
+            </button>
+            <input
+              class="filtro__minmax--inputCenter"
+              type="text"
+              name="minEngagement"
+              id="minEngagement"
+              placeholder="Min"
+            />
+            <input
+              class="filtro__minmax--inputRight"
+              type="text"
+              name="maxEngagement"
+              id="maxEngagement"
+              placeholder="Max"
+            />
+          </div>
+        </div>
+        <div class="filtro__minmax">
+          <label for="minEngagementRate">Eng Rate</label>
+          <div class="filtro__minmax--form">
+            <button class="filtro__minmax--boton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="19"
+                viewBox="0 0 18 19"
+                fill="none"
+              >
+                <path
+                  d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z"
+                  fill="#F8F8F8"
+                />
+              </svg>
+            </button>
+            <input
+              class="filtro__minmax--inputCenter"
+              type="text"
+              name="minEngagementRate"
+              id="minEngagementRate"
+              placeholder="Min"
+            />
+            <input
+              class="filtro__minmax--inputRight"
+              type="text"
+              name="maxEngagementRate"
+              id="maxEngagementRate"
+              placeholder="Max"
+            />
+          </div>
+        </div>
+        <div class="filtro__minmax">
+          <label for="minImpresiones">Impresiones</label>
+          <div class="filtro__minmax--form">
+            <button class="filtro__minmax--boton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="19"
+                viewBox="0 0 18 19"
+                fill="none"
+              >
+                <path
+                  d="M6.75 0.75C8.47391 0.75 10.1272 1.43482 11.3462 2.65381C12.5652 3.87279 13.25 5.52609 13.25 7.25C13.25 8.86 12.66 10.34 11.69 11.48L11.96 11.75H12.75L17.75 16.75L16.25 18.25L11.25 13.25V12.46L10.98 12.19C9.80055 13.1968 8.30071 13.7499 6.75 13.75C5.02609 13.75 3.37279 13.0652 2.15381 11.8462C0.934819 10.6272 0.25 8.97391 0.25 7.25C0.25 5.52609 0.934819 3.87279 2.15381 2.65381C3.37279 1.43482 5.02609 0.75 6.75 0.75ZM6.75 2.75C4.25 2.75 2.25 4.75 2.25 7.25C2.25 9.75 4.25 11.75 6.75 11.75C9.25 11.75 11.25 9.75 11.25 7.25C11.25 4.75 9.25 2.75 6.75 2.75Z"
+                  fill="#F8F8F8"
+                />
+              </svg>
+            </button>
+            <input
+              class="filtro__minmax--inputCenter"
+              type="text"
+              name="minImpresiones"
+              id="minImpresiones"
+              placeholder="Min"
+            />
+            <input
+              class="filtro__minmax--inputRight"
+              type="text"
+              name="maxImpresiones"
+              id="maxImpresiones"
+              placeholder="Max"
+            />
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="parte-1">
+      <h2>Resultados 8 cuentas</h2>
+      <div class="main__buscar">
+        <button class="main__buscar--boton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+          >
+            <path
+              d="M6.75 0.25C8.47391 0.25 10.1272 0.934819 11.3462 2.15381C12.5652 3.37279 13.25 5.02609 13.25 6.75C13.25 8.36 12.66 9.84 11.69 10.98L11.96 11.25H12.75L17.75 16.25L16.25 17.75L11.25 12.75V11.96L10.98 11.69C9.80055 12.6968 8.30071 13.2499 6.75 13.25C5.02609 13.25 3.37279 12.5652 2.15381 11.3462C0.934819 10.1272 0.25 8.47391 0.25 6.75C0.25 5.02609 0.934819 3.37279 2.15381 2.15381C3.37279 0.934819 5.02609 0.25 6.75 0.25ZM6.75 2.25C4.25 2.25 2.25 4.25 2.25 6.75C2.25 9.25 4.25 11.25 6.75 11.25C9.25 11.25 11.25 9.25 11.25 6.75C11.25 4.25 9.25 2.25 6.75 2.25Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+        <input
+          class="main__buscar--input"
+          type="text"
+          name="buscar"
+          id="buscar"
+          placeholder="Buscar"
+        />
+      </div>
+      <div class="influcards" id="influcards">
+        <!-- Aqui añado los influencers por Javascript con el metodo influcard.js como si de un componente se tratase -->
+      </div>
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <script type="module" src="./src/js/index.js"></script>
 </html>
