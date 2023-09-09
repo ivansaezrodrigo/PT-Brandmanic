@@ -1,17 +1,4 @@
-
-// Implementada funcion que pone las letras de las cantidades
-function formateaNumero(num) {
-    if (num >= 1000000000) {
-        return (num / 1000000000).toFixed(1).replace(/\.0$/, '') + 'G';
-    }
-    if (num >= 1000000) {
-        return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
-    }
-    if (num >= 1000) {
-        return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
-    }
-    return num;
-}
+import { formateaNumero } from "../utils/letrasNumeros.js";
 
 // Funcion para crear las influcard por parametros
 export function creaInflucard(params) {
@@ -33,8 +20,8 @@ export function creaInflucard(params) {
     pulsarDiv.className = 'influcard__perfil--pulsar';
     pulsarDiv.textContent = 'Ver influcard';
     const pulsarLink = document.createElement('a');
-    pulsarLink.href = '#';
-    pulsarLink.id = 'verInflucard';
+    pulsarLink.href = '/influcardStats.html';
+    pulsarLink.classList = 'verInflucard';
     //pulsarDiv.appendChild(pulsarLink);
     pulsarLink.appendChild(pulsarDiv);
 

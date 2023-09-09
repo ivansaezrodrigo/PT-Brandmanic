@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Influcard</title>
-        <link rel="stylesheet" href="./src/css/normalize.css">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
         <link rel="stylesheet" href="./src/css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
@@ -18,11 +18,11 @@
                 </div>
                 <div
                     class="influcard__perfil--datos influcard__perfil--datos-negro">
-                    <span id="stats_username">[username]</span>
+                    <span id="stats_username"></span>
                     <ul>
-                        <li id="stats_sexoEdad">[sexo], [edad] años</li>
-                        <li id="stats_pais">[pais]</li>
-                        <li id="stats_categorias">[categorias]</li>
+                        <li id="stats_sexoEdad"></li>
+                        <li id="stats_pais"></li>
+                        <li id="stats_categorias"></li>
                     </ul>
                 </div>
             </div>
@@ -100,17 +100,15 @@
                         <div class="audiencia__fakeReal--separador"></div>
                         <div class="audiencia__fakeReal--stat">
                             Seguidores Fake
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M14.754 10C15.72 10 16.504 10.784 16.504 11.75V16.499C16.504 17.6927 16.0298 18.8376 15.1857 19.6817C14.3416 20.5258 13.1967 21 12.003 21C10.8093 21 9.66441 20.5258 8.82031 19.6817C7.97621 18.8376 7.502 17.6927 7.502 16.499V11.75C7.502 10.784 8.285 10 9.252 10H14.754ZM7.131 10C6.77082 10.4335 6.55417 10.9681 6.511 11.53L6.501 11.75V16.499C6.501 17.346 6.693 18.148 7.035 18.864C6.44228 19.0226 5.82103 19.0427 5.21929 18.9228C4.61756 18.8029 4.05145 18.5463 3.56475 18.1727C3.07805 17.7991 2.68379 17.3185 2.41246 16.7682C2.14114 16.2179 2.00001 15.6126 2 14.999V11.75C2.00002 11.3108 2.16517 10.8877 2.46268 10.5646C2.76019 10.2415 3.1683 10.0421 3.606 10.006L3.75 10H7.131ZM16.875 10H20.25C21.216 10 22 10.784 22 11.75V15C22.0001 15.6132 21.8593 16.2182 21.5884 16.7682C21.3175 17.3183 20.9237 17.7987 20.4376 18.1724C19.9514 18.546 19.3858 18.8029 18.7846 18.9232C18.1833 19.0435 17.5625 19.0239 16.97 18.866C17.27 18.238 17.454 17.546 17.495 16.814L17.504 16.499V11.75C17.504 11.085 17.269 10.475 16.875 10ZM12 3C12.7956 3 13.5587 3.31607 14.1213 3.87868C14.6839 4.44129 15 5.20435 15 6C15 6.79565 14.6839 7.55871 14.1213 8.12132C13.5587 8.68393 12.7956 9 12 9C11.2044 9 10.4413 8.68393 9.87868 8.12132C9.31607 7.55871 9 6.79565 9 6C9 5.20435 9.31607 4.44129 9.87868 3.87868C10.4413 3.31607 11.2044 3 12 3ZM18.5 4C19.163 4 19.7989 4.26339 20.2678 4.73223C20.7366 5.20107 21 5.83696 21 6.5C21 7.16304 20.7366 7.79893 20.2678 8.26777C19.7989 8.73661 19.163 9 18.5 9C17.837 9 17.2011 8.73661 16.7322 8.26777C16.2634 7.79893 16 7.16304 16 6.5C16 5.83696 16.2634 5.20107 16.7322 4.73223C17.2011 4.26339 17.837 4 18.5 4ZM5.5 4C6.16304 4 6.79893 4.26339 7.26777 4.73223C7.73661 5.20107 8 5.83696 8 6.5C8 7.16304 7.73661 7.79893 7.26777 8.26777C6.79893 8.73661 6.16304 9 5.5 9C4.83696 9 4.20107 8.73661 3.73223 8.26777C3.26339 7.79893 3 7.16304 3 6.5C3 5.83696 3.26339 5.20107 3.73223 4.73223C4.20107 4.26339 4.83696 4 5.5 4Z" fill="#D9D9D9"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <path d="M19.7917 17V19H7.29167V17C7.29167 17 7.29167 13 13.5417 13C19.7917 13 19.7917 17 19.7917 17ZM16.6667 8C16.6667 7.40666 16.4834 6.82664 16.14 6.33329C15.7966 5.83994 15.3086 5.45543 14.7376 5.22836C14.1665 5.0013 13.5382 4.94189 12.932 5.05765C12.3258 5.1734 11.769 5.45912 11.332 5.87868C10.8949 6.29824 10.5973 6.83279 10.4767 7.41473C10.3561 7.99667 10.418 8.59987 10.6545 9.14805C10.8911 9.69623 11.2916 10.1648 11.8055 10.4944C12.3194 10.8241 12.9236 11 13.5417 11C14.3705 11 15.1653 10.6839 15.7514 10.1213C16.3374 9.55871 16.6667 8.79565 16.6667 8ZM20 13.06C20.5694 13.5643 21.0285 14.1724 21.3504 14.8489C21.6723 15.5254 21.8507 16.2566 21.875 17V19H25V17C25 17 25 13.55 20 13.06ZM18.75 5C18.4353 5.00018 18.1225 5.04741 17.8229 5.14C18.4323 5.97897 18.7591 6.97718 18.7591 8C18.7591 9.02282 18.4323 10.021 17.8229 10.86C18.1225 10.9526 18.4353 10.9998 18.75 11C19.5788 11 20.3737 10.6839 20.9597 10.1213C21.5458 9.55871 21.875 8.79565 21.875 8C21.875 7.20435 21.5458 6.44129 20.9597 5.87868C20.3737 5.31607 19.5788 5 18.75 5ZM8.33333 10H0V12H8.33333V10Z" fill="#D9D9D9"/>
                               </svg>
                             <span id="stats_fake">1.98 K</span>
                         </div>
                         <div class="audiencia__fakeReal--separador"></div>
                         <div class="audiencia__fakeReal--stat">
                             Audiencia Real
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M14.754 10C15.72 10 16.504 10.784 16.504 11.75V16.499C16.504 17.6927 16.0298 18.8376 15.1857 19.6817C14.3416 20.5258 13.1967 21 12.003 21C10.8093 21 9.66441 20.5258 8.82031 19.6817C7.97621 18.8376 7.502 17.6927 7.502 16.499V11.75C7.502 10.784 8.285 10 9.252 10H14.754ZM7.131 10C6.77082 10.4335 6.55417 10.9681 6.511 11.53L6.501 11.75V16.499C6.501 17.346 6.693 18.148 7.035 18.864C6.44228 19.0226 5.82103 19.0427 5.21929 18.9228C4.61756 18.8029 4.05145 18.5463 3.56475 18.1727C3.07805 17.7991 2.68379 17.3185 2.41246 16.7682C2.14114 16.2179 2.00001 15.6126 2 14.999V11.75C2.00002 11.3108 2.16517 10.8877 2.46268 10.5646C2.76019 10.2415 3.1683 10.0421 3.606 10.006L3.75 10H7.131ZM16.875 10H20.25C21.216 10 22 10.784 22 11.75V15C22.0001 15.6132 21.8593 16.2182 21.5884 16.7682C21.3175 17.3183 20.9237 17.7987 20.4376 18.1724C19.9514 18.546 19.3858 18.8029 18.7846 18.9232C18.1833 19.0435 17.5625 19.0239 16.97 18.866C17.27 18.238 17.454 17.546 17.495 16.814L17.504 16.499V11.75C17.504 11.085 17.269 10.475 16.875 10ZM12 3C12.7956 3 13.5587 3.31607 14.1213 3.87868C14.6839 4.44129 15 5.20435 15 6C15 6.79565 14.6839 7.55871 14.1213 8.12132C13.5587 8.68393 12.7956 9 12 9C11.2044 9 10.4413 8.68393 9.87868 8.12132C9.31607 7.55871 9 6.79565 9 6C9 5.20435 9.31607 4.44129 9.87868 3.87868C10.4413 3.31607 11.2044 3 12 3ZM18.5 4C19.163 4 19.7989 4.26339 20.2678 4.73223C20.7366 5.20107 21 5.83696 21 6.5C21 7.16304 20.7366 7.79893 20.2678 8.26777C19.7989 8.73661 19.163 9 18.5 9C17.837 9 17.2011 8.73661 16.7322 8.26777C16.2634 7.79893 16 7.16304 16 6.5C16 5.83696 16.2634 5.20107 16.7322 4.73223C17.2011 4.26339 17.837 4 18.5 4ZM5.5 4C6.16304 4 6.79893 4.26339 7.26777 4.73223C7.73661 5.20107 8 5.83696 8 6.5C8 7.16304 7.73661 7.79893 7.26777 8.26777C6.79893 8.73661 6.16304 9 5.5 9C4.83696 9 4.20107 8.73661 3.73223 8.26777C3.26339 7.79893 3 7.16304 3 6.5C3 5.83696 3.26339 5.20107 3.73223 4.73223C4.20107 4.26339 4.83696 4 5.5 4Z" fill="#D9D9D9"/>
-                              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="#d9d9d9" d="M6.75 2.5a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5ZM1.5 12a2 2 0 0 1 2-2H10a2 2 0 0 1 .993.263A5.489 5.489 0 0 0 9 14.5c0 .396.042.781.121 1.153c-.644.217-1.425.347-2.371.347c-2.513 0-3.867-.92-4.568-1.934a3.948 3.948 0 0 1-.67-1.807a2.589 2.589 0 0 1-.012-.175V12ZM17 6.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Zm2 8a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm-2.002-1.108h-1.545l-.477-1.531a.494.494 0 0 0-.952 0l-.477 1.531H12c-.484 0-.686.647-.294.944l1.25.947l-.477 1.532c-.15.48.378.88.77.583l1.25-.947l1.25.947c.392.297.92-.103.77-.583l-.477-1.532l1.25-.947c.392-.297.19-.944-.294-.944Z"/></svg>
                             <span id="stats_real">32.93 K</span>
                         </div>
                     </div>
@@ -160,7 +158,7 @@
                 </div>
                 <div class="publicaciones__marcasTrabajado">
                     <span>Marcas con las que ha trabajado</span>
-                    <div class="publicaciones__marcasTrabajado--marcas">
+                    <div class="publicaciones__marcasTrabajado--marcas" id="publicaciones__marcasContenedor">
                         <div class="publicaciones__marcasTrabajado--marcas-marca">
                             <img src="https://logotipoz.com/wp-content/uploads/2022/03/netflix-logo.png" alt="Logo netflix">
                             Netflix
@@ -266,164 +264,5 @@
             </div>
         </main>
     </body>
-    <script>
-    
-
-    function makeChart(typeChart,idGrafica, arrayTitulos, arrayDatos, ejeBooleano = true) {
-    const eje = ejeBooleano ? 'x' : 'y';
-
-    const existingChart = Chart.getChart(idGrafica);
-    if (existingChart) {
-        existingChart.destroy();
-    }
-
-    if (!ejeBooleano) {
-        var scales = {
-                y: {
-                    ticks: {
-                        fontSize: 12, 
-                        maxRotation: 0, 
-                        autoSkip: false,
-                    }
-                },
-                x: {
-                    beginAtZero: true,
-                    ticks:{
-                        callback: function (value) {
-                            return value + '%'; // Agregar el símbolo de porcentaje a las etiquetas
-                        }
-                    }
-                }
-            }
-    } else {
-        var scales = {
-                y: {
-                    ticks: {
-                        fontSize: 12, 
-                        maxRotation: 0, 
-                        autoSkip: false,
-                        callback: function (value) {
-                            return value + '%'; // Agregar el símbolo de porcentaje a las etiquetas
-                        }
-                    }
-                },
-                x: {
-                    beginAtZero: true,
-                }
-            }
-    }
-
-    new Chart(idGrafica, {
-        type: typeChart,
-        data: {
-            labels: arrayTitulos, 
-            datasets: [{
-                label: '',
-                data: arrayDatos,
-                borderWidth: 1,
-                backgroundColor: [
-    'rgba(255, 205, 86)',
-    'rgba(255, 159, 64)',
-    'rgba(153, 102, 255)',
-      'rgba(255, 99, 132)',
-      'rgba(75, 192, 192)',
-      'rgba(54, 162, 235)',
-      'rgba(201, 203, 207)'
-    ],
-    borderColor: [
-        'rgb(255, 205, 86)',
-        'rgb(255, 159, 64)',
-        'rgb(153, 102, 255)',
-      'rgb(255, 99, 132)',
-      'rgb(75, 192, 192)',
-      'rgb(54, 162, 235)',
-      'rgb(201, 203, 207)'
-    ],label:'%'
-            }]
-        },
-        
-        options: {
-            plugins: {
-                colors: {
-                enabled: true
-                },  
-                legend: {
-                    display: false,
-                    labels: {
-                        boxWidth: 0,
-                    }
-                }
-            },
-            indexAxis: eje,
-            scales:scales
-        }
-    });
-}
-
-    const ratioSegunDia = document.getElementById('grafica__ratioSegunDia');
-    const distribucionTerritorios = document.getElementById('grafica__distribucionTerritorios');
-
-    makeChart('line',ratioSegunDia, ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'], [15, 23, 65, 123, 23, 51, 54]);
-    makeChart('bar',distribucionTerritorios, ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'], [15, 23, 65, 123, 23, 51, 54],false);
-
-    const distribucionEdad = document.getElementById('grafica__distribucionEdad');
-    makeChart('bar',distribucionEdad, ['13-17','18-24','25-34','35-44','45-64','65 +'], [6.73,37.21,53,2.5,0.55,0])
-
-    function makeCircularChart(typeChart, idGrafica, arrayTitulos, arrayDatos, backgroundColor , mostrarLeyenda = true) {
-    var data = {
-        datasets: [{
-            label: 'Reached',
-            data: arrayDatos,
-            borderColor: '#00000000',
-            backgroundColor,
-            label: '%',
-        }],
-        labels: arrayTitulos,
-    };
-    new Chart(idGrafica, {
-        data: data,
-        type: typeChart,
-        options: {
-            plugins : {
-                legend: {
-                    display: mostrarLeyenda,
-                }
-            },
-            scale: {
-                display: false
-            }
-        }
-    });
-}
-
-    const distribucionFranjaPublicaciones = document.getElementById('grafica__distribucionFranjaPublicaciones')
-    makeCircularChart('polarArea',distribucionFranjaPublicaciones,['Mañana', 'Tarde', 'Noche'],[30,50,20],[
-                "rgba(255, 225, 106)",
-                "rgba(255, 159, 64)",
-                "#B7610B",
-                "#1da1f2",
-                "#bd081c"
-            ])
-
-    const distribucionGenero = document.getElementById('grafica__distribucionGenero')
-    makeCircularChart('pie',distribucionGenero,['Hombres','Mujeres'],[26.274,73],[
-        "#1da1f2",
-        "#FF3399",
-            ],true) 
-    
-    const distribucionPais = document.getElementById('grafica__distribucionPais')
-    makeChart('bar',distribucionPais,['ES','US','IT','FR','GB','Otros'], [6.73,37.21,53,2.5,0.55,0],false)
-
-    const reachGraph = document.getElementById('header__reachGraph')
-    makeCircularChart('doughnut',reachGraph,['Reached','No reached'],[50,50],['#0000AAAA','#00000000'],false)
-
-    const relevanceGraph = document.getElementById('header__relevanceGraph')
-    makeCircularChart('doughnut',relevanceGraph,['Relevance','No Relevance'],[52,48],['#E2D006','#00000000'],false)
-
-    const resonanceGraph = document.getElementById('header__resonanceGraph')
-    makeCircularChart('doughnut',resonanceGraph,['Resonance','No resonance'],[60,40],['#06E25A','#00000000'],false)
-
-
-    </script>
-    <script src="./src/js/graficas/header.js"></script>
+    <script type="module" src="./src/js/influcardStats.js"></script>
 </html>
