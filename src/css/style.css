@@ -9,6 +9,12 @@
 }
 
 /*General*/
+
+body,html {
+    width: -webkit-fill-available;
+    height: auto;
+}
+
 html {
     font-size: var(--aumento-ui)
 }
@@ -61,6 +67,10 @@ aside {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+h1,h2,h3,h4,h5 {
+    font-family: var(--font-family);
+}
+
 a {
     margin: 0;
     padding: 0;
@@ -80,9 +90,36 @@ header {
     color: #2a2a2a;
 }
 
+footer {
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+.marcaDeAgua {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: right;
+    font-family: var(--font-family);
+    height: 5rem;
+    max-width: 30rem;
+}
+
+.marcaDeAgua img{
+    height: 5rem;
+    max-width: 25rem;
+}
+
 
 
 /*Utils*/
+header > .oculto {
+    display: none;
+}
+
 .flex {
     display: flex;
     align-items: center;
@@ -165,6 +202,8 @@ header {
 .header__boton--descargar {
     color: #fff;
     background: #F23A09;
+    cursor: pointer;
+    user-select: none;
 }
 
 .header__reachGraph, .header__resonanceGraph, .header__relevanceGraph {

@@ -1,8 +1,8 @@
-import { mostrarLoader } from "./utils/loader.js";
 import { formateaNumero } from "./utils/letrasNumeros.js";
 import { makeCircularChart, makeChart } from "./graficas/charts.js";
 import { data } from '../mock/data.js'
 import { creaMarca } from "./componentes/marca.js";
+import { hacerCaptura } from './utils/capturaDePantalla.js'
 
 // Elementos del DOM - Graficas
 const ratioSegunDia = document.getElementById('grafica__ratioSegunDia');
@@ -137,8 +137,12 @@ engagementAlcance.innerText = Math.round(data['influcard']['er_alcance'] * 100) 
 engagementAudiencia.innerText = Math.round(data['influcard']['er_audiencia'] * 100) / 100 + '%'
 
 
+// Captura de pantalla
+const capturarBoton = document.getElementById('descargarBoton');
 
-
+capturarBoton.addEventListener('click', () => {
+    hacerCaptura(username.textContent)
+});
 
 
 
