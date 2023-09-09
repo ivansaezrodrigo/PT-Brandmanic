@@ -1,3 +1,5 @@
+// JavaScript de influcardStats.html
+
 import { formateaNumero } from "./utils/letrasNumeros.js";
 import { makeCircularChart, makeChart } from "./graficas/charts.js";
 import { data } from '../mock/data.js'
@@ -72,7 +74,6 @@ const distribucionPaisPorcentaje_otros = distribucionPaisPorcentaje.reduce(
 const distribucionPaisTitulo = distribucionPaisRangos.map(edad => edad.country).concat('Otros')
 const distribucionPaisPorcentaje_completo = distribucionPaisPorcentaje.concat(Math.round((100 - distribucionPaisPorcentaje_otros) * 100) / 100)
 
-
 makeChart('bar', distribucionPais, distribucionPaisTitulo, distribucionPaisPorcentaje_completo, false)
 
 // Graficas Publicaciones
@@ -97,12 +98,10 @@ makeCircularChart('polarArea', distribucionFranjaPublicaciones, rangoDiaTitulo, 
 ])
 
 const contenedorMarcas = document.getElementById('publicaciones__marcasContenedor');
-var arrayMarcas = data['influcard']['brands_images'].slice(0,8).map(marca => {
-    const nuevaMarca = creaMarca(marca.name,marca.image)
+var arrayMarcas = data['influcard']['brands_images'].slice(0, 8).map(marca => {
+    const nuevaMarca = creaMarca(marca.name, marca.image)
     contenedorMarcas.appendChild(nuevaMarca);
 })
-
-
 
 // Graficas Desmpeño
 const week = data['influcard']['post_week_day'].map(function (day) {
@@ -120,7 +119,7 @@ sexoEdad.innerText = `${data['influcard']['gender'] == 1 ? 'Mujer' : 'Hombre'}, 
 pais.innerText = data['influcard']['country']
 categorias.innerText = Object.keys(data['influcard']['tags']).slice(1, 4)
 
-//Datos porcentajes
+//Datos porcentajes extraidos y formateados segun el mock.js
 audiencia.innerText = formateaNumero(data['influcard']['followers'])
 fake.innerText = formateaNumero(data['influcard']['fake_followers_formated']) + ' %'
 real.innerText = formateaNumero(data['influcard']['real_followers'])

@@ -1,3 +1,4 @@
+// funcion para mostrar el loader en el index
 export function mostrarLoader() {
     Swal.fire({
         title: 'Cargando...',
