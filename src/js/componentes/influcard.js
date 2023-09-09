@@ -22,7 +22,7 @@ export function creaInflucard(params) {
   pulsarDiv.className = "influcard__perfil--pulsar";
   pulsarDiv.textContent = "Ver influcard";
   const pulsarLink = document.createElement("a");
-  pulsarLink.href = "/influcardStats.html";
+  pulsarLink.href = "influcardStats.html";
   pulsarLink.classList = "verInflucard";
 
   pulsarLink.appendChild(pulsarDiv);
