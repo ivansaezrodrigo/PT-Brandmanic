@@ -72,4 +72,5 @@ verInflucardElements.forEach((element) => {
     });
 });
 
-console.log('Gracias por su tiempo :)\nAtte: Ivan Saez Rodrigo')
+
+console.log('Gracias por su tiempo :)\nAtte: Iván Sáez Rodrigo')
